@@ -1,6 +1,6 @@
 #include <Servo.h>
-Servo upper;
-Servo lower;
+Servo upper;  //for upper servo motor
+Servo lower;  //for lower servo motor
 int upPos,lpPos;
 void setup() {
   Serial.begin(9600);
