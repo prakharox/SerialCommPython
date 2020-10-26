@@ -3,7 +3,6 @@
 #define SERVO_UPPER_PIN	11
 #define SERVO_LOWER_PIN	10
 
-
 Servo upper;  //for upper servo motor
 Servo lower;  //for lower servo motor
 uint16_t upPos,lpPos;
@@ -14,10 +13,10 @@ void setup() {
   lower.attach(SERVO_LOWER_PIN);  
 }
 void loop() {
-  int uPos,lPos;
+  uint16_t uPos,lPos;
   if(Serial.available() > 0) {
     String dat=Serial.readString();
-    long signed int data = dat.toInt();
+    int32_t data = dat.toInt();
     uPos=data%1000;
     lPos=data/1000;
     upPos=uPos;
