@@ -1,11 +1,17 @@
 #include <Servo.h>
+
+#define SERVO_UPPER_PIN	11
+#define SERVO_LOWER_PIN	10
+
+
 Servo upper;  //for upper servo motor
 Servo lower;  //for lower servo motor
-int upPos,lpPos;
+uint16_t upPos,lpPos;
+
 void setup() {
   Serial.begin(9600); //begin serial communication at 9600
-  upper.attach(11);
-  lower.attach(10);  
+  upper.attach(SERVO_UPPER_PIN);
+  lower.attach(SERVO_LOWER_PIN);  
 }
 void loop() {
   int uPos,lPos;
