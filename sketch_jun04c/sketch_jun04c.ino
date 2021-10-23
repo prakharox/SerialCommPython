@@ -32,17 +32,17 @@ void loop()
   {
     //Can be done in a single line -> data = Serial.readString().toInt()
     //see if any issues come up with that in the future
-    dat=Serial.readString();
-    data = dat.toInt();
-    uPos=data%1000;
-    lPos=data/1000;
-    upPos=uPos;
-    lpPos=lPos;
+    dat   = Serial.readString();
+    data  = dat.toInt();
+    uPos  = data%1000;
+    lPos  = data/1000;
+    upPos = uPos;
+    lpPos = lPos;
   }
   else
   {
-    uPos=upPos;
-    lPos=lpPos;
+    uPos = upPos;
+    lPos = lpPos;
   }
     upper.write(uPos);
     lower.write(lPos);
